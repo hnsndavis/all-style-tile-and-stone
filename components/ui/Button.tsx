@@ -4,12 +4,11 @@ import { ButtonHTMLAttributes, forwardRef, ReactNode } from 'react';
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'accent' | 'outline';
   size?: 'sm' | 'md' | 'lg';
-  asChild?: boolean;
   children: ReactNode;
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant = 'primary', size = 'md', asChild, children, ...props }, ref) => {
+  ({ className, variant = 'primary', size = 'md', children, ...props }, ref) => {
     const baseStyles = 'inline-flex items-center justify-center font-semibold transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed';
 
     const variants = {
@@ -26,17 +25,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     };
 
     const classes = cn(baseStyles, variants[variant], sizes[size], className);
-
-    if (asChild && typeof children === 'object' && children !== null && 'props' in children) {
-      const childProps = (children as any).props;
-      return {
-        ...children,
-        props: {
-          ...childProps,
-          className: cn(classes, childProps.className),
-        },
-      } as any;
-    }
 
     return (
       <button

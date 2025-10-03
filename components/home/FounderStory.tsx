@@ -1,6 +1,5 @@
 import Container from '@/components/ui/Container';
-import Button from '@/components/ui/Button';
-import Link from 'next/link';
+import ButtonLink from '@/components/ui/ButtonLink';
 
 export default function FounderStory() {
   return (
@@ -93,9 +92,9 @@ export default function FounderStory() {
             </div>
 
             <div className="pt-6">
-              <Button variant="accent" size="lg" asChild>
-                <Link href="#quote">Request Your Quote</Link>
-              </Button>
+              <ButtonLink href="#quote" variant="accent" size="lg">
+                Request Your Quote
+              </ButtonLink>
             </div>
           </div>
         </div>

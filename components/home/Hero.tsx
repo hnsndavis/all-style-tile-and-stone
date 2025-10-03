@@ -1,5 +1,4 @@
-import Link from 'next/link';
-import Button from '@/components/ui/Button';
+import ButtonLink from '@/components/ui/ButtonLink';
 import { Shield, Award, CheckCircle, Star } from 'lucide-react';
 
 export default function Hero() {
@@ -30,12 +29,12 @@ export default function Hero() {
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <Button variant="accent" size="lg" asChild>
-            <Link href="#quote">Request Your Quote</Link>
-          </Button>
-          <Button variant="secondary" size="lg" asChild>
-            <Link href="#portfolio">View Our Work</Link>
-          </Button>
+          <ButtonLink href="#quote" variant="accent" size="lg">
+            Request Your Quote
+          </ButtonLink>
+          <ButtonLink href="#portfolio" variant="secondary" size="lg">
+            View Our Work
+          </ButtonLink>
         </div>
 
         {/* Trust Badges */}

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
-import Button from '@/components/ui/Button';
+import ButtonLink from '@/components/ui/ButtonLink';
 import Container from '@/components/ui/Container';
 import { COMPANY } from '@/lib/constants';
 
@@ -57,9 +57,9 @@ export default function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden md:block">
-            <Button variant="accent" size="md" asChild>
-              <Link href="#quote">Request Quote</Link>
-            </Button>
+            <ButtonLink href="#quote" variant="accent" size="md">
+              Request Quote
+            </ButtonLink>
           </div>
 
           {/* Mobile Menu Button */}
@@ -89,11 +89,15 @@ export default function Header() {
                 </Link>
               ))}
               <div className="pt-4">
-                <Button variant="accent" size="lg" className="w-full" asChild>
-                  <Link href="#quote" onClick={() => setIsMobileMenuOpen(false)}>
-                    Request Quote
-                  </Link>
-                </Button>
+                <ButtonLink
+                  href="#quote"
+                  variant="accent"
+                  size="lg"
+                  className="w-full"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Request Quote
+                </ButtonLink>
               </div>
             </div>
           </Container>

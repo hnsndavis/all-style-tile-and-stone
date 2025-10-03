@@ -3,8 +3,7 @@
 import { useState } from 'react';
 import Container from '@/components/ui/Container';
 import Card from '@/components/ui/Card';
-import Button from '@/components/ui/Button';
-import Link from 'next/link';
+import ButtonLink from '@/components/ui/ButtonLink';
 import type { ProjectType } from '@/lib/types';
 
 const projects = [
@@ -150,9 +149,9 @@ export default function PortfolioGallery() {
 
         {/* CTA */}
         <div className="text-center">
-          <Button variant="outline" size="lg" asChild>
-            <Link href="#contact">View Complete Portfolio →</Link>
-          </Button>
+          <ButtonLink href="#contact" variant="outline" size="lg">
+            View Complete Portfolio →
+          </ButtonLink>
         </div>
       </Container>
     </section>
