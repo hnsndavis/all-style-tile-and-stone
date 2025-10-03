@@ -17,9 +17,40 @@
   -moz-osx-font-smoothing: grayscale;
   -o-font-smoothing: antialiased;
 }
-/* Speed up hero zoom animation */
+/* Responsive typography logo */
+.navbar2_logo-link span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+@media screen and (max-width: 767px) {
+  .navbar2_logo-link span {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .navbar2_logo-link span {
+    font-size: 1rem;
+  }
+}
+
+.footer2_logo-link span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+@media screen and (max-width: 767px) {
+  .footer2_logo-link span {
+    font-size: 1.1rem;
+  }
+}
+
+/* Speed up hero zoom animation - instant response */
 .header83_image {
-  transition: transform 0.3s ease-out !important;
+  transition: transform 0.1s ease-out !important;
 }
 
 /* Convert Process items to cards */
@@ -30,11 +61,21 @@
   padding: 2rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  height: 100%;
 }
 
 .layout237_item:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transform: translateY(-4px);
+}
+
+.layout237_item .heading-style-h4 {
+  font-size: 1.25rem;
+}
+
+.layout237_list {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
 </style>
 </head>
@@ -273,7 +314,7 @@ margin: 0rem !important;
     </div>
     <div data-collapse="medium" data-animation="default" data-duration="400" fs-scrolldisable-element="smart-nav" data-easing="ease" data-easing2="ease" role="banner" class="navbar2_component color-scheme-2 w-nav">
       <div class="navbar2_container">
-        <a href="#" class="navbar2_logo-link w-nav-brand"><span style="font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em;">All Style Tile & Stone</span></a>
+        <a href="#" class="navbar2_logo-link w-nav-brand"><span>All Style Tile & Stone</span></a>
         <nav role="navigation" id="w-node-_932ca550-8260-a37d-8d58-bc399f8b2ab6-9f8b2ab2" class="navbar2_menu is-page-height-tablet w-nav-menu">
           <a href="#services" class="navbar2_link w-nav-link">Services</a>
           <a href="#portfolio" class="navbar2_link w-nav-link">Portfolio</a>
@@ -637,7 +678,7 @@ margin: 0rem !important;
             <div class="padding-bottom padding-medium">
               <div class="w-layout-grid footer2_top-wrapper">
                 <div class="w-layout-grid footer2_left-wrapper">
-                  <a href="#" id="w-node-_402dae67-0b53-8231-9334-61d2735c74c4-735c74bd" class="footer2_logo-link w-nav-brand"><img loading="lazy" src="images/Logo-wide.svg" alt="" class="footer2_logo"></a>
+                  <a href="#" id="w-node-_402dae67-0b53-8231-9334-61d2735c74c4-735c74bd" class="footer2_logo-link w-nav-brand"><span>All Style Tile & Stone</span></a>
                   <div class="footer2_link-column">
                     <div class="margin-bottom margin-xsmall">
                       <div class="text-weight-semibold">Contact</div>
@@ -657,6 +698,21 @@ margin: 0rem !important;
                       <a href="#portfolio" class="footer2_link">Portfolio</a>
                       <a href="#about" class="footer2_link">About</a>
                       <a href="#contact" class="footer2_link">Contact</a>
+                    </div>
+                  </div>
+                  <div class="footer2_link-column">
+                    <div class="margin-bottom margin-xsmall">
+                      <div class="text-weight-semibold">Service Areas</div>
+                    </div>
+                    <div class="footer2_link-list">
+                      <div class="footer2_link">Boise</div>
+                      <div class="footer2_link">Meridian</div>
+                      <div class="footer2_link">Nampa</div>
+                      <div class="footer2_link">Caldwell</div>
+                      <div class="footer2_link">Eagle</div>
+                      <div class="footer2_link">Kuna</div>
+                      <div class="footer2_link">Star</div>
+                      <div class="footer2_link">Middleton</div>
                     </div>
                   </div>
                 </div>
